@@ -1,8 +1,8 @@
 {
-  "name": "react-native-floating-action-bar",
+  "name": "@naftalimurgor/expo-floating-action-bar",
   "version": "1.1.3",
   "description": "A React Native floating action bar.",
-  "main": "src/FloatingActionBar.js",
+  "main": "dist/FloatingActionBar.js",
   "scripts": {
     "test": "echo \"Error: no test specified\"",
     "lint": "eslint .",
@@ -15,7 +15,7 @@
     "bar",
     "floating"
   ],
-  "author": "Johan Haneveld",
+  "author": "Naftali Murgor",
   "license": "MIT",
   "husky": {
     "hooks": {

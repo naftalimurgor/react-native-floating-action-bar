@@ -1,6 +1,9 @@
 import PropTypes from 'prop-types';
 import React from 'react';
-import {LayoutAnimation, StyleSheet, View} from 'react-native';
+import {
+  LayoutAnimation,
+  StyleSheet, View
+} from 'react-native';
 
 const FloatingActionIndicator = ({
   activeBackgroundColor,
@@ -10,6 +13,7 @@ const FloatingActionIndicator = ({
   width,
 }) => {
   LayoutAnimation.configureNext(null);
+
   LayoutAnimation.configureNext(ANIMATION_PRESET);
   return (
     <View
@@ -28,17 +32,17 @@ const FloatingActionIndicator = ({
 
 const ANIMATION_PRESET = {
   duration: 200,
-  update: {type: 'easeOut'},
+  update: { type: 'easeOut' },
 };
 
 const getPosition = (position, index, width, height) => {
   switch (position) {
     case 'top':
     case 'bottom':
-      return {left: index * width};
+      return { left: index * width };
     case 'left':
     case 'right':
-      return {top: index * height};
+      return { top: index * height };
   }
 };
 

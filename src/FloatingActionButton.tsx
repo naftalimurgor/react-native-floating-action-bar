@@ -1,6 +1,9 @@
 import PropTypes from 'prop-types';
 import React from 'react';
-import {StyleSheet, TouchableOpacity} from 'react-native';
+import {
+  StyleSheet,
+  TouchableOpacity
+} from 'react-native';
 
 const FloatingActionButton = ({
   active,
@@ -14,15 +17,21 @@ const FloatingActionButton = ({
   width,
 }) => (
   <TouchableOpacity
-    style={[styles.container, style, {width, height}]}
+    style={[styles.container, style, { width, height }]}
     onPress={onPress}>
     {typeof icon === 'string'
-      ? renderIcon({active, activeColor, color, icon, size})
-      : icon({active, activeColor, color, icon, size})}
+      ? renderIcon({ active, activeColor, color, icon, size })
+      : icon({ active, activeColor, color, icon, size })}
   </TouchableOpacity>
 );
 
-const renderIcon = ({active, activeColor, color, icon, size}) => {
+const renderIcon = ({
+  active,
+  activeColor,
+  color,
+  icon,
+  size }) => {
+  // buy-in of expo-icons
   const Icon = require('react-native-vector-icons/FontAwesome').default;
   return <Icon name={icon} size={size} color={active ? activeColor : color} />;
 };
